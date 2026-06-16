@@ -1,0 +1,41 @@
+{% extends "tracker/base.html" %}
+
+{% block content %}
+<div class="row justify-content-center align-items-center" style="min-height: 75vh;">
+    <div class="col-md-7 text-center animate-fade-in">
+        <h1 class="display-3 fw-bold mb-3 text-white">
+            Codeforces Analytics
+        </h1>
+        <p class="lead text-secondary mb-5 px-md-5">
+            Elevate your competitive programming journey with deep insights, progress tracking, and AI-driven recommendations.
+        </p>
+        
+        <div class="card p-5 shadow-2xl mx-auto" style="max-width: 500px; background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.1);">
+            <form method="post">
+                {% csrf_token %}
+                <div class="mb-4 text-start">
+                    <label class="form-label text-white small fw-semibold text-uppercase" style="letter-spacing: 1px;">Codeforces Handle</label>
+                    <input type="text" name="handle" class="form-control form-control-lg bg-dark bg-opacity-50 text-white border-secondary border-opacity-50" placeholder="e.g. tourist" required autofocus style="border-radius: 12px; height: 56px;">
+                </div>
+                <button type="submit" class="btn btn-primary btn-lg w-100 py-3 shadow-lg">Analyze Profile</button>
+            </form>
+            {% if messages %}
+                {% for message in messages %}
+                <div class="alert alert-danger mt-4 border-0 bg-danger bg-opacity-10 text-danger small">
+                    {{ message }}
+                </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+        
+        <div class="mt-5 animate-fade-in" style="animation-delay: 0.3s;">
+            <p class="text-muted small text-uppercase fw-bold mb-3" style="letter-spacing: 2px;">Popular Profiles</p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="{% url 'profile' 'tourist' %}" class="btn btn-outline-secondary btn-sm px-3 rounded-pill">tourist</a>
+                <a href="{% url 'profile' 'Benq' %}" class="btn btn-outline-secondary btn-sm px-3 rounded-pill">Benq</a>
+                <a href="{% url 'profile' 'Petr' %}" class="btn btn-outline-secondary btn-sm px-3 rounded-pill">Petr</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
