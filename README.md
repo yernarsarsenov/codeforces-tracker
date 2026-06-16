@@ -31,7 +31,7 @@ A modern analytics dashboard for Codeforces users. This tool helps competitive p
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/yernarsarsenov/codeforces-tracker.git
-   cd codeforces-profile-tracker
+   cd codeforces-tracker
    ```
 
 2. **Setup Virtual Environment:**
