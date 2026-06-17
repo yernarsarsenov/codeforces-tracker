@@ -1,4 +1,5 @@
-# Codeforces Profile Tracker 🚀
+# Codeforces Profile Tracker 🚀 
+### 🔗 Try it live [here](https://codeforces-tracker-ochre.vercel.app/)
 
 A modern analytics dashboard for Codeforces users. This tool helps competitive programmers visualize their progress and identifies areas for improvement using real-time data from the Codeforces API.
 
