@@ -22,13 +22,13 @@
             <div class="row g-2 mb-4">
                 <div class="col-6">
                     <div class="p-3 rounded-3 bg-white bg-opacity-5">
-                        <small class="text-secondary d-block mb-1">Current Rating</small>
+                        <small class="d-block mb-1" style="color: {{ user.rank_color }}; opacity: 0.8;">Current Rating</small>
                         <span class="h4 fw-bold" style="color: {{ user.rank_color }};">{{ user.rating|default:"-" }}</span>
                     </div>
                 </div>
                 <div class="col-6">
                     <div class="p-3 rounded-3 bg-white bg-opacity-5">
-                        <small class="text-secondary d-block mb-1">Max Rating</small>
+                        <small class="d-block mb-1" style="color: {{ user.max_rank_color }}; opacity: 0.8;">Max Rating</small>
                         <span class="h4 fw-bold" style="color: {{ user.max_rank_color }};">{{ user.maxRating|default:"-" }}</span>
                     </div>
                 </div>
